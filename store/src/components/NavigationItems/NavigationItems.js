@@ -12,10 +12,10 @@ const navigationItems = () => (
         </ul>
 
         <ul className={`${classes.nav} ml-auto`}>
-            <NavigationItem link="/">Location</NavigationItem>
-            <NavigationItem link="/">Login</NavigationItem>
-            <NavigationItem link="/"><i class="fa fa-search"></i></NavigationItem>
-            <NavigationItem link="/">Cart</NavigationItem>
+            <NavigationItem link="/"><i className="fas fa-map-marker-alt"></i>Location</NavigationItem>
+            <NavigationItem link="/"><i className="fas fa-sign-in-alt"></i>Login</NavigationItem>
+            <NavigationItem link="/"><i className="fa fa-search"></i>Search</NavigationItem>
+            <NavigationItem link="/"><i className="fas fa-shopping-cart"></i>My Cart</NavigationItem>
         </ul>
     </div>
     

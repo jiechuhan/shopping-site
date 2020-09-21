@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import classes from './HeroImage.module.css';
-import Navbar from '../Navbar/Navbar';
+
+import Navbar from '../../components/Navbar/Navbar';
+import Button from '../../components/Button/Button';
 
 const heroImage = () => {
     return (
@@ -21,7 +23,7 @@ const heroImage = () => {
                     <div className="col-sm">
                     <h2>Christmas Limited</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <button><span>EXPLORE</span></button>
+                    <Button>EXPLORE</Button>
                     </div>
                     <div className="col-sm"></div>
                     <div className="col-sm"></div>
