@@ -18,7 +18,7 @@ const heroImage = () => {
 
             <Navbar />
 
-            <div className={`container ${classes.abstract}`}>
+            <div className={`${classes.container} ${classes.abstract}`}>
                 <div className="row">
                     <div className="col-sm">
                     <h2>Christmas Limited</h2>

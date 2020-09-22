@@ -1,3 +1,9 @@
+.container {
+	max-width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .sticky {
 	/* position: fixed; */
 	top: 0;

@@ -4,6 +4,7 @@ import classes from './ProductList.module.css';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
+import Card from '../../components/Card/Card';
 
 const prodcutList = () => {
     return (
@@ -11,22 +12,29 @@ const prodcutList = () => {
             <div className={classes.sticky}>
                 <Navbar className={classes.nav} />
             </div>
-            
-            <div className="container content">
+
+            <div className={classes.container}>
                 <h1 className={classes.order}>Order</h1>
-                
-                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                    <div className={`col ${classes.dropDownMenu}`}>
-                        <Button>PICK-UP</Button>
-                        <Button>DELIVERY</Button>
-                        <Button>CURBSIDE PICK-UP</Button>
+
+                <div className="row">
+                    <div className={`col-sm-3 ${classes.dropDownMenu}`}>
+                        <Button btnType="dropdown-item">PICK-UP</Button>
+                        <Button btnType="dropdown-item">DELIVERY</Button>
+                        <Button btnType="dropdown">CURBSIDE PICK-UP</Button>
+                    </div>
+
+                    <div class="col-sm-9 d-flex flex-wrap justify-content-center">
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    
+
+                        
                     </div>
                 </div>
-        </div>
-
-
+            </div>
         </React.Fragment>
-        
     );
 };
 
