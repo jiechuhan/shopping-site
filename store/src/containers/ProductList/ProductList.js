@@ -9,20 +9,6 @@ import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 
 class ProductList extends Component {
-    // state = {
-    //     products: [
-    //         {
-    //             productId: "1",
-    //             productName: 'item1',
-    //             productPrice: "$40",
-    //             productImage: null,
-    //             productUrl: null,
-    //             productTitle: "title1",
-    //             productDescription: "description1"
-    //         }
-    //     ]
-    // };
-
     state = { products: data};
 
     render() {
