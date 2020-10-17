@@ -1,3 +1,30 @@
+.container {
+    display: flex;
+    margin: 0 atuo;
+}
+
 .content {
-    margin-top: 10%;
+    width: 100%;
+    margin: 10vh;
+}
+
+.title {
+	text-align: center;
+	color: #F2F2F2;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 500;
+}
+
+.description {
+    text-align: center;
+    color: #F2F2F2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+}
+
+.price {
+	color: #F2F2F2;
+	text-align: center;
+    font-family: Didot, serif;
+    font-size: 1.25em;
 }

@@ -12,21 +12,18 @@ function ProductList() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://dummy.restapiexample.com/api/v1/employees')
+        axios.get('https://localhost:5001/api/products')
             .then(res => {
-                setProducts(res.data.data)
+                setProducts(res.data)
             })
             .catch(error => {
                 setProducts(error)
             });
     },[])
 
-    return (           
-
+    return (    
         <div>
-            <div className={classes.sticky}>
-                <Navbar className={classes.nav} />
-            </div>
+            <Navbar className={classes.nav} />
 
             <div className={classes.container}>
                 <h1 className={classes.order}>Order</h1>
@@ -39,12 +36,12 @@ function ProductList() {
                     </div>
 
                     <div className="col-sm-9 d-flex flex-wrap justify-content-center">  
-                        <h1>{products.userId}</h1>
+                        <h1>{products.id}</h1>
                         {products.map(product => {
                             return(
                                 <Card key={product.id}
-                                      productName={product.employee_name}
-                                      productPrice={product.employee_salary} />
+                                      productName={product.name}
+                                      productPrice={product.price} />
                             )
                         })}
                     </div>

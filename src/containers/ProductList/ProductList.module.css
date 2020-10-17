@@ -4,12 +4,6 @@
 	margin-left: auto;
 }
 
-.sticky {
-	/* position: fixed; */
-	top: 0;
-	z-index: 1000;
-}
-
 .order {
 	color: white;
 	margin: 4vh auto;
