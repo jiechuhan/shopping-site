@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import classes from './ProductList.module.css';
 
-import data from '../../assets/data/data.js';
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 
 function ProductList() {
-    const [products, setProducts] = useState("products");
-    // state = { products: data};
+    const [products, setProducts] = useState([]);
 
-
-    //     let products = this.state.products.map(product => {
-    //         return (
-    //             <Card product={product}/>
-    //         );
+    useEffect(() => {
+        axios.get('http://dummy.restapiexample.com/api/v1/employees')
+            .then(res => {
+                setProducts(res.data.data)
+            })
+            .catch(error => {
+                setProducts(error)
+            });
+    },[])
 
     return (           
 
@@ -35,9 +38,15 @@ function ProductList() {
                         <Button btnType="dropdown">CURBSIDE PICK-UP</Button>
                     </div>
 
-                    <div class="col-sm-9 d-flex flex-wrap justify-content-center">  
-                        <h1>{products}</h1>
-                        
+                    <div className="col-sm-9 d-flex flex-wrap justify-content-center">  
+                        <h1>{products.userId}</h1>
+                        {products.map(product => {
+                            return(
+                                <Card key={product.id}
+                                      productName={product.employee_name}
+                                      productPrice={product.employee_salary} />
+                            )
+                        })}
                     </div>
                 </div>
             </div>

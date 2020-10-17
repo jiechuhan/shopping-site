@@ -11,8 +11,8 @@ const card = (props) => {
         <div className={`mx-2 my-4 ${classes.card}`}>
             <img src={img} className="card-img-top" alt={`bakery`}></img>
             <div className="card-body">
-                <h5 className="card-title">{props.product.productName}</h5>
-                <p className="card-text">{props.product.productPrice}</p>
+                <h5 className="card-title">{props.productName}</h5>
+                <p className="card-text">{props.productPrice}</p>
             </div>
             <Button btnType="addToCart"><span>Add to cart</span></Button>
         </div>
